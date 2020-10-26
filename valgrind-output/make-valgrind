@@ -1,0 +1,377 @@
+# Explicitly disable sanitizer(s)
+make clean SANITIZER=0 qtest
+make[1]: Entering directory '/mnt/d/Desktop/lab0-c'
+rm -f qtest.o report.o console.o harness.o queue.o random.o dudect/constant.o dudect/fixture.o dudect/ttest.o .qtest.o.d .report.o.d .console.o.d .harness.o.d .queue.o.d .random.o.d .dudect/constant.o.d .dudect/fixture.o.d .dudect/ttest.o.d *~ qtest /tmp/qtest.*
+rm -rf .dudect
+rm -rf *.dSYM
+(cd traces; rm -f *~)
+  CC    qtest.o
+  CC    report.o
+  CC    console.o
+  CC    harness.o
+  CC    queue.o
+  CC    random.o
+  CC    dudect/constant.o
+  CC    dudect/fixture.o
+  CC    dudect/ttest.o
+  LD    qtest
+make[1]: Leaving directory '/mnt/d/Desktop/lab0-c'
+cp qtest /tmp/qtest.S2MMOE
+chmod u+x /tmp/qtest.S2MMOE
+sed -i "s/alarm/isnan/g" /tmp/qtest.S2MMOE
+scripts/driver.py -p /tmp/qtest.S2MMOE --valgrind
+---     Trace           Points
++++ TESTING trace trace-01-ops:
+==104== ./.valgrindrc was not read as it is either not a regular file,
+==104==     or is world writeable, or is not owned by the current user.
+==104== Memcheck, a memory error detector
+==104== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==104== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==104== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-01-ops.cmd
+==104==
+FATAL: Git hooks are not properly installed.
+
+Git hooks are installed successfully.
+# Test of insert_head and remove_head
+==104==
+==104== HEAP SUMMARY:
+==104==     in use at exit: 0 bytes in 0 blocks
+==104==   total heap usage: 86 allocs, 86 frees, 20,130 bytes allocated
+==104==
+==104== All heap blocks were freed -- no leaks are possible
+==104==
+==104== For lists of detected and suppressed errors, rerun with: -s
+==104== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-01-ops    6/6
++++ TESTING trace trace-02-ops:
+==114== ./.valgrindrc was not read as it is either not a regular file,
+==114==     or is world writeable, or is not owned by the current user.
+==114== Memcheck, a memory error detector
+==114== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==114== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==114== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-02-ops.cmd
+==114==
+# Test of insert_head, insert_tail, and remove_head
+==114==
+==114== HEAP SUMMARY:
+==114==     in use at exit: 0 bytes in 0 blocks
+==114==   total heap usage: 121 allocs, 121 frees, 29,912 bytes allocated
+==114==
+==114== All heap blocks were freed -- no leaks are possible
+==114==
+==114== For lists of detected and suppressed errors, rerun with: -s
+==114== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-02-ops    6/6
++++ TESTING trace trace-03-ops:
+==115== ./.valgrindrc was not read as it is either not a regular file,
+==115==     or is world writeable, or is not owned by the current user.
+==115== Memcheck, a memory error detector
+==115== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==115== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==115== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-03-ops.cmd
+==115==
+# Test of insert_head, insert_tail, reverse, and remove_head
+==115==
+==115== HEAP SUMMARY:
+==115==     in use at exit: 0 bytes in 0 blocks
+==115==   total heap usage: 158 allocs, 158 frees, 36,555 bytes allocated
+==115==
+==115== All heap blocks were freed -- no leaks are possible
+==115==
+==115== For lists of detected and suppressed errors, rerun with: -s
+==115== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-03-ops    6/6
++++ TESTING trace trace-04-ops:
+==116== ./.valgrindrc was not read as it is either not a regular file,
+==116==     or is world writeable, or is not owned by the current user.
+==116== Memcheck, a memory error detector
+==116== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==116== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==116== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-04-ops.cmd
+==116==
+# Test of insert_head, insert_tail, size, and sort
+==116==
+==116== HEAP SUMMARY:
+==116==     in use at exit: 0 bytes in 0 blocks
+==116==   total heap usage: 121 allocs, 121 frees, 23,708 bytes allocated
+==116==
+==116== All heap blocks were freed -- no leaks are possible
+==116==
+==116== For lists of detected and suppressed errors, rerun with: -s
+==116== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-04-ops    6/6
++++ TESTING trace trace-05-ops:
+==117== ./.valgrindrc was not read as it is either not a regular file,
+==117==     or is world writeable, or is not owned by the current user.
+==117== Memcheck, a memory error detector
+==117== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==117== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==117== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-05-ops.cmd
+==117==
+# Test of insert_head, insert_tail, remove_head, reverse, size, and sort
+==117==
+==117== HEAP SUMMARY:
+==117==     in use at exit: 0 bytes in 0 blocks
+==117==   total heap usage: 148 allocs, 148 frees, 30,142 bytes allocated
+==117==
+==117== All heap blocks were freed -- no leaks are possible
+==117==
+==117== For lists of detected and suppressed errors, rerun with: -s
+==117== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-05-ops    5/5
++++ TESTING trace trace-06-string:
+==118== ./.valgrindrc was not read as it is either not a regular file,
+==118==     or is world writeable, or is not owned by the current user.
+==118== Memcheck, a memory error detector
+==118== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==118== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==118== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-06-string.cmd
+==118==
+# Test of truncated strings
+==118==
+==118== HEAP SUMMARY:
+==118==     in use at exit: 0 bytes in 0 blocks
+==118==   total heap usage: 196 allocs, 196 frees, 28,229 bytes allocated
+==118==
+==118== All heap blocks were freed -- no leaks are possible
+==118==
+==118== For lists of detected and suppressed errors, rerun with: -s
+==118== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-06-string 6/6
++++ TESTING trace trace-07-robust:
+==119== ./.valgrindrc was not read as it is either not a regular file,
+==119==     or is world writeable, or is not owned by the current user.
+==119== Memcheck, a memory error detector
+==119== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==119== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==119== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-07-robust.cmd
+==119==
+# Test operations on NULL queue
+==119==
+==119== HEAP SUMMARY:
+==119==     in use at exit: 0 bytes in 0 blocks
+==119==   total heap usage: 69 allocs, 69 frees, 13,532 bytes allocated
+==119==
+==119== All heap blocks were freed -- no leaks are possible
+==119==
+==119== For lists of detected and suppressed errors, rerun with: -s
+==119== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-07-robust 6/6
++++ TESTING trace trace-08-robust:
+==120== ./.valgrindrc was not read as it is either not a regular file,
+==120==     or is world writeable, or is not owned by the current user.
+==120== Memcheck, a memory error detector
+==120== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==120== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==120== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-08-robust.cmd
+==120==
+# Test operations on empty queue
+==120==
+==120== HEAP SUMMARY:
+==120==     in use at exit: 0 bytes in 0 blocks
+==120==   total heap usage: 62 allocs, 62 frees, 13,524 bytes allocated
+==120==
+==120== All heap blocks were freed -- no leaks are possible
+==120==
+==120== For lists of detected and suppressed errors, rerun with: -s
+==120== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-08-robust 6/6
++++ TESTING trace trace-09-robust:
+==121== ./.valgrindrc was not read as it is either not a regular file,
+==121==     or is world writeable, or is not owned by the current user.
+==121== Memcheck, a memory error detector
+==121== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==121== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==121== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-09-robust.cmd
+==121==
+# Test remove_head with NULL argument
+==121==
+==121== HEAP SUMMARY:
+==121==     in use at exit: 0 bytes in 0 blocks
+==121==   total heap usage: 59 allocs, 59 frees, 10,535 bytes allocated
+==121==
+==121== All heap blocks were freed -- no leaks are possible
+==121==
+==121== For lists of detected and suppressed errors, rerun with: -s
+==121== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-09-robust 6/6
++++ TESTING trace trace-10-malloc:
+==122== ./.valgrindrc was not read as it is either not a regular file,
+==122==     or is world writeable, or is not owned by the current user.
+==122== Memcheck, a memory error detector
+==122== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==122== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==122== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-10-malloc.cmd
+==122==
+# Test of malloc failure on new
+malloc() failed in q_new().
+malloc() failed in q_new().
+==122==
+==122== HEAP SUMMARY:
+==122==     in use at exit: 0 bytes in 0 blocks
+==122==   total heap usage: 71 allocs, 71 frees, 10,661 bytes allocated
+==122==
+==122== All heap blocks were freed -- no leaks are possible
+==122==
+==122== For lists of detected and suppressed errors, rerun with: -s
+==122== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-10-malloc 6/6
++++ TESTING trace trace-11-malloc:
+==123== ./.valgrindrc was not read as it is either not a regular file,
+==123==     or is world writeable, or is not owned by the current user.
+==123== Memcheck, a memory error detector
+==123== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==123== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==123== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-11-malloc.cmd
+==123==
+# Test of malloc failure on insert_head
+strdup() failed: new->value in q_insert_head().
+strdup() failed: new->value in q_insert_head().
+strdup() failed: new->value in q_insert_head().
+malloc() failed: newh in q_insert_head().
+malloc() failed: newh in q_insert_head().
+strdup() failed: new->value in q_insert_head().
+strdup() failed: new->value in q_insert_head().
+strdup() failed: new->value in q_insert_head().
+malloc() failed: newh in q_insert_head().
+==123==
+==123== HEAP SUMMARY:
+==123==     in use at exit: 0 bytes in 0 blocks
+==123==   total heap usage: 93 allocs, 93 frees, 11,979 bytes allocated
+==123==
+==123== All heap blocks were freed -- no leaks are possible
+==123==
+==123== For lists of detected and suppressed errors, rerun with: -s
+==123== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-11-malloc 6/6
++++ TESTING trace trace-12-malloc:
+==124== ./.valgrindrc was not read as it is either not a regular file,
+==124==     or is world writeable, or is not owned by the current user.
+==124== Memcheck, a memory error detector
+==124== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==124== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==124== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-12-malloc.cmd
+==124==
+# Test of malloc failure on insert_tail
+malloc() failed: newh in q_insert_tail().
+strdup() failed: newh->value q_insert_tail().
+strdup() failed: newh->value q_insert_tail().
+malloc() failed: newh in q_insert_tail().
+strdup() failed: newh->value q_insert_tail().
+malloc() failed: newh in q_insert_tail().
+malloc() failed: newh in q_insert_tail().
+strdup() failed: newh->value q_insert_tail().
+==124==
+==124== HEAP SUMMARY:
+==124==     in use at exit: 0 bytes in 0 blocks
+==124==   total heap usage: 138 allocs, 138 frees, 14,081 bytes allocated
+==124==
+==124== All heap blocks were freed -- no leaks are possible
+==124==
+==124== For lists of detected and suppressed errors, rerun with: -s
+==124== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-12-malloc 6/6
++++ TESTING trace trace-13-perf:
+==125== ./.valgrindrc was not read as it is either not a regular file,
+==125==     or is world writeable, or is not owned by the current user.
+==125== Memcheck, a memory error detector
+==125== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==125== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==125== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-13-perf.cmd
+==125==
+# Test performance of insert_tail
+==125==
+==125== HEAP SUMMARY:
+==125==     in use at exit: 0 bytes in 0 blocks
+==125==   total heap usage: 2,004,065 allocs, 2,004,065 frees, 104,216,562 bytes allocated
+==125==
+==125== All heap blocks were freed -- no leaks are possible
+==125==
+==125== For lists of detected and suppressed errors, rerun with: -s
+==125== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-13-perf   6/6
++++ TESTING trace trace-14-perf:
+==126== ./.valgrindrc was not read as it is either not a regular file,
+==126==     or is world writeable, or is not owned by the current user.
+==126== Memcheck, a memory error detector
+==126== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==126== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-14-perf.cmd
+==126==
+# Test performance of size
+==126==
+==126== HEAP SUMMARY:
+==126==     in use at exit: 0 bytes in 0 blocks
+==126==   total heap usage: 2,000,058 allocs, 2,000,058 frees, 104,010,452 bytes allocated
+==126==
+==126== All heap blocks were freed -- no leaks are possible
+==126==
+==126== For lists of detected and suppressed errors, rerun with: -s
+==126== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-14-perf   6/6
++++ TESTING trace trace-15-perf:
+==127== ./.valgrindrc was not read as it is either not a regular file,
+==127==     or is world writeable, or is not owned by the current user.
+==127== Memcheck, a memory error detector
+==127== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==127== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==127== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-15-perf.cmd
+==127==
+# Test performance of insert_tail, size, reverse, and sort
+==127==
+==127== HEAP SUMMARY:
+==127==     in use at exit: 0 bytes in 0 blocks
+==127==   total heap usage: 4,000,077 allocs, 4,000,077 frees, 207,010,690 bytes allocated
+==127==
+==127== All heap blocks were freed -- no leaks are possible
+==127==
+==127== For lists of detected and suppressed errors, rerun with: -s
+==127== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-15-perf   6/6
++++ TESTING trace trace-16-perf:
+==128== ./.valgrindrc was not read as it is either not a regular file,
+==128==     or is world writeable, or is not owned by the current user.
+==128== Memcheck, a memory error detector
+==128== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==128== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==128== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-16-perf.cmd
+==128==
+# Test performance of sort with random and descending orders
+# 10000: all correct sorting algorithms are expected pass
+# 50000: sorting algorithms with O(n^2) time complexity are expected failed
+# 100000: sorting algorithms with O(nlogn) time complexity are expected pass
+==128==
+==128== HEAP SUMMARY:
+==128==     in use at exit: 0 bytes in 0 blocks
+==128==   total heap usage: 320,148 allocs, 320,148 frees, 16,651,622 bytes allocated
+==128==
+==128== All heap blocks were freed -- no leaks are possible
+==128==
+==128== For lists of detected and suppressed errors, rerun with: -s
+==128== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-16-perf   6/6
++++ TESTING trace trace-17-complexity:
+==129== ./.valgrindrc was not read as it is either not a regular file,
+==129==     or is world writeable, or is not owned by the current user.
+==129== Memcheck, a memory error detector
+==129== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==129== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==129== Command: /tmp/qtest.S2MMOE -v 1 -f ./traces/trace-17-complexity.cmd
+==129==
+# Test if q_insert_tail and q_size is constant time complexity
+Probably constant time
+Probably constant time
+==129==
+==129== HEAP SUMMARY:
+==129==     in use at exit: 0 bytes in 0 blocks
+==129==   total heap usage: 240,181,315 allocs, 240,181,315 frees, 12,479,619,226 bytes allocated
+==129==
+==129== All heap blocks were freed -- no leaks are possible
+==129==
+==129== For lists of detected and suppressed errors, rerun with: -s
+==129== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+---     trace-17-complexity     5/5
+---     TOTAL           100/100
+
+Test with specific case by running command:
+scripts/driver.py -p /tmp/qtest.S2MMOE --valgrind -t <tid>
